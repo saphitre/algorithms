@@ -16,12 +16,69 @@ public class TwoDArray {
 
 //        ShellSort.sort(arrayOneD);
 
-        SelectSort.sort(arrayOneD);
+//        SelectSort.sort(arrayOneD);
 
 
         System.out.println();
-        convertToTwoDArray();
-        display();
+//        convertToTwoDArray();
+//        display();
+
+//        searchRowMin();
+//        searchRowMax();
+
+//        searchColumnMin();
+//        searchColumnMax();
+
+
+
+    }
+
+    private void searchRowMax(){
+        int max;
+        for (int i = 0;i<nRow;i++){
+            max=array[i][0];
+            for(int j=1; j<mColumn;j++){
+                if(max<array[i][j])
+                    max=array[i][j];
+            }
+            System.out.println(max);
+        }
+    }
+
+    private void searchRowMin(){
+        int min;
+        for (int i = 0;i<nRow;i++){
+            min=array[i][0];
+            for(int j=1; j<mColumn;j++){
+                if(min>array[i][j])
+                    min=array[i][j];
+            }
+            System.out.println(min);
+        }
+    }
+
+    private void searchColumnMax(){
+        int max;
+        for (int i = 0;i<mColumn;i++){
+            max=array[0][i];
+            for(int j=1; j<nRow;j++){
+                if (max<array[j][i])
+                    max=array[j][i];
+            }
+            System.out.println(max);
+        }
+    }
+
+    private void searchColumnMin(){
+        int min;
+        for (int i = 0;i<mColumn;i++){
+            min=array[0][i];
+            for(int j=1; j<nRow;j++){
+                if (min>array[j][i])
+                    min=array[j][i];
+            }
+            System.out.println(min);
+        }
     }
 
     public TwoDArray(int nRow, int mColumn){
@@ -42,14 +99,15 @@ public class TwoDArray {
     public void display(){
         for (int i = 0;i<nRow;i++){
             for(int j=0; j<mColumn;j++){
-                System.out.println(array[i][j]);
+                System.out.print(array[i][j] + " ");
             }
+            System.out.println(" ");
         }
     }
 
     public void displayOneD(){
         for (int i = 0;i<nRow*mColumn;i++){
-            System.out.println(arrayOneD[i]);
+            System.out.print(arrayOneD[i] + " ");
         }
     }
 
