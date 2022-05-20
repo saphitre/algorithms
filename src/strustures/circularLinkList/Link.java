@@ -9,7 +9,7 @@ public class Link {
         return data;
     }
 
-    Link(int data, String stringData){ //конструктор
+    public Link(int data, String stringData){ //конструктор
         this.data=data;
         this.sData=stringData;
         // next по умолчанию присваивается null

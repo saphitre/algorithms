@@ -3,7 +3,7 @@ package strustures.linkList;
 public class LinkList {
     private Link first;
 
-    public void LinkList(){
+    public LinkList(){
         first=null;
     }
     public boolean isEmpty(){

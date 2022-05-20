@@ -1,6 +1,8 @@
 import sorting.*;
 import strustures.circularLinkList.CircularLinkList;
+import strustures.doubleLinkList.DoubleLinkList;
 import strustures.linkList.LinkList;
+import strustures.twoDArray.TwoDArray;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,13 +26,18 @@ public class Main {
 //        System.out.println(linkList.delete());
 
 
-        CircularLinkList circularLinkList = new CircularLinkList();
-        System.out.println(circularLinkList.isEmpty());
-        circularLinkList.insert();
-        System.out.println(circularLinkList.isEmpty());
-        System.out.println(circularLinkList.findByKey(1));
+//        CircularLinkList circularLinkList = new CircularLinkList();
+//        System.out.println(circularLinkList.isEmpty());
+//        circularLinkList.insert();
+//        System.out.println(circularLinkList.isEmpty());
+//        System.out.println(circularLinkList.findByKey(1));
 
+//        DoubleLinkList doubleLinkList = new DoubleLinkList();
+//        doubleLinkList.insertFirst(1,"Hello");
+//        doubleLinkList.insertLast(2,"Bye");
 
+        TwoDArray twoDArray=new TwoDArray(4,4);
+        twoDArray.task();
     }
 
     private static void display(Integer[] array){
