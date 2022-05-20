@@ -37,9 +37,12 @@ public class Main {
 //        circularLinkList.delete();
 //        System.out.println(circularLinkList.findByKey(1));
 
-//        DoubleLinkList doubleLinkList = new DoubleLinkList();
-//        doubleLinkList.insertFirst(1,"Hello");
-//        doubleLinkList.insertLast(2,"Bye");
+        DoubleLinkList doubleLinkList = new DoubleLinkList();
+        doubleLinkList.insertFirst(1,"Hello");
+        doubleLinkList.insertLast(2,"Bye");
+        doubleLinkList.deleteLast();
+        doubleLinkList.deleteFirst();
+        System.out.println(doubleLinkList.isEmpty());
 
 //        TwoDArray twoDArray=new TwoDArray(4,4);
 //        twoDArray.task();

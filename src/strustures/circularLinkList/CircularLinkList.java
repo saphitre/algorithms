@@ -48,6 +48,10 @@ public class CircularLinkList {
         return current;
     }
 
+    public void sort(){
+
+    }
+
 //    public Link deleteByKey(int key){
 //        Link current = begin;
 //        Link previous =begin;
