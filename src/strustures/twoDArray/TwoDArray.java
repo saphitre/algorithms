@@ -1,6 +1,7 @@
 package strustures.twoDArray;
 
 import sorting.SelectSort;
+import sorting.ShakeSort;
 import sorting.ShellSort;
 
 public class TwoDArray {
@@ -17,6 +18,8 @@ public class TwoDArray {
 //        ShellSort.sort(arrayOneD);
 
 //        SelectSort.sort(arrayOneD);
+
+//        ShakeSort.sort(arrayOneD);
 
 
         System.out.println();

@@ -11,6 +11,7 @@ public class Main {
 //        SelectSort.sort(array);
 //        InsertSort.sort(array);
 //        ShellSort.sort(array);
+//        ShakeSort.sort(array);
 //        Partition.partition(array, 20, 0, array.length-1);
 //        QuickSort.sort(array,array.length-1,0 );
 //        display(array);
@@ -28,16 +29,22 @@ public class Main {
 
 //        CircularLinkList circularLinkList = new CircularLinkList();
 //        System.out.println(circularLinkList.isEmpty());
-//        circularLinkList.insert();
+//        circularLinkList.insert(1, "Hello");
+//        circularLinkList.insert(3,"Bye");
+//        circularLinkList.insert(2,"Good");
 //        System.out.println(circularLinkList.isEmpty());
+//        System.out.println(circularLinkList.findByKey(3));
+//        circularLinkList.delete();
 //        System.out.println(circularLinkList.findByKey(1));
 
 //        DoubleLinkList doubleLinkList = new DoubleLinkList();
 //        doubleLinkList.insertFirst(1,"Hello");
 //        doubleLinkList.insertLast(2,"Bye");
 
-        TwoDArray twoDArray=new TwoDArray(4,4);
-        twoDArray.task();
+//        TwoDArray twoDArray=new TwoDArray(4,4);
+//        twoDArray.task();
+
+
     }
 
     private static void display(Integer[] array){
