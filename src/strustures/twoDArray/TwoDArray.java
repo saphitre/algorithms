@@ -4,6 +4,8 @@ import sorting.SelectSort;
 import sorting.ShakeSort;
 import sorting.ShellSort;
 
+import java.util.Scanner;
+
 public class TwoDArray {
     private int nRow; //число строк
     private int mColumn; //число столбцов
@@ -99,6 +101,16 @@ public class TwoDArray {
                 array[i][j]=(int) (Math.random()*100);
             }
         }
+    }
+
+    private void insert(){ // ввод элементов массива из консоли
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0;i<nRow;i++){
+            for(int j=0; j<mColumn;j++){
+                array[i][j]=sc.nextInt();
+            }
+        }
+
     }
 
     public void display(){ //вывод двумерного массива
