@@ -1,22 +1,22 @@
 package strustures.circularLinkList;
 
-public class CircularLinkList {
-    private Link begin;
-    private Link end;
+public class CircularLinkList { //односвязный кольцевой список
+    private Link begin;  //ссылка на 1ый элемент списка
+    private Link end;  //ссылка на последний элемент списка
 
 
-     public CircularLinkList(){
+     public CircularLinkList(){ //конструктор без аргументом
         begin=null;
         end=null;
     }
 
     public boolean isEmpty(){
         return (begin==null);
-    }
+    } //проверка на наличие элементов в списке
 
-    public void insert(int data,String sData){
+    public void insert(int data,String sData){ //вставка элемента в конец списка
         Link link =new Link(data,sData);
-        if(begin==null)
+        if(begin==null) //если список пуст
             begin=link;
         else
             end.next=link;
@@ -28,16 +28,16 @@ public class CircularLinkList {
             begin=begin.next;
             end.next=begin;
     }
-    public void display(){
+    public void display(){ //вывести список
         Link current = begin;
         do {
             current.display();
             current=current.next;
         }while (current!=begin);
     }
-    public Link findByKey(int key){
+    public Link findByKey(int key){ //найти элемент по ключу
          Link current = begin;
-        if(current==null)
+        if(current==null) //если список пуст
             return null;
         else
             do {
@@ -48,7 +48,7 @@ public class CircularLinkList {
         return current;
     }
 
-    public void sort(){
+    public void sort(){ //сортировка элементов списка
 
     }
 

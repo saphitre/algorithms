@@ -1,20 +1,20 @@
 package strustures.doubleLinkList;
 
-public class DoubleLinkList {
-    private Link first;
-    private Link last;
+public class DoubleLinkList { //двусвязный список
+    private Link first; //ссылка на первый элемент
+    private Link last; //ссылка на последний элемент
 
-    public DoubleLinkList(){
+    public DoubleLinkList(){ //конструктор
         first=null;
     }
 
     public boolean isEmpty(){
         return (first==null);
-    }
+    } //проверка есть ли элементы в списке
 
     public void insertFirst(int data, String sData){ //добавление в начало списка
-        Link link = new Link(data,sData);
-        if(first==null){
+        Link link = new Link(data,sData); // создание объекта ( нового элемента списка)
+        if(first==null){ //если список пуст
             last=link;
         }
         else {
@@ -22,12 +22,12 @@ public class DoubleLinkList {
             link.next=first;
         }
         first=link;
-        System.out.println(link.getData());
+        System.out.println(link.getData()); //вывод ключа нового элемента
     }
 
     public void insertLast(int data, String sData){ //добавление в конец списка
-        Link link = new Link(data, sData);
-        if (first==null){
+        Link link = new Link(data, sData); // создание объекта ( нового элемента списка)
+        if (first==null){ //если список пуст
             first=link;
         }
         else {
@@ -35,11 +35,11 @@ public class DoubleLinkList {
             link.previous = last;
         }
         last=link;
-        System.out.println(last.getData());
+        System.out.println(last.getData()); //вывод ключа нового элемента
     }
 
-    public void deleteFirst(){
-        if(first.next==null){
+    public void deleteFirst(){ //удалить элемент из начала списка
+        if(first.next==null){ //если список пуст
             last=null;
         }
         else {
@@ -48,9 +48,8 @@ public class DoubleLinkList {
         first=first.next;
     }
 
-    public void deleteLast(){
-        Link temp;
-        if (first.next==null){
+    public void deleteLast(){ //удалить элемент из конца списка
+        if (first.next==null){ //если список пуст
             first=null;
         }
         else {
@@ -60,9 +59,7 @@ public class DoubleLinkList {
     }
 
 
-    public void deleteByKey(){
+    public void sort(){ //сортировка
 
     }
-
-    public void sort(){}
 }

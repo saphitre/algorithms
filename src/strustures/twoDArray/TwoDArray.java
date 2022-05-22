@@ -5,16 +5,17 @@ import sorting.ShakeSort;
 import sorting.ShellSort;
 
 public class TwoDArray {
-    private int nRow;
-    private int mColumn;
-    private Integer[][] array;
-    private Integer[] arrayOneD;
+    private int nRow; //число строк
+    private int mColumn; //число столбцов
+    private Integer[][] array; //объявление массива
+    private Integer[] arrayOneD; //объявление массива
 
-    public void task(){
-        fillTwoDArray();
-        display();
-        convertToOneDArray();
+    public void task(){ // задание
+        fillTwoDArray(); //заполнить массив рандомными числами
+        display(); // вывод массива
+        convertToOneDArray(); //конвертировать двумерный массив в одномерный
 
+        //вызовы методов сортировок классов ШеллаСорт, ВыборомСорт, ШейкернаяСорт (папка сортинг)
 //        ShellSort.sort(arrayOneD);
 
 //        SelectSort.sort(arrayOneD);
@@ -22,7 +23,7 @@ public class TwoDArray {
 //        ShakeSort.sort(arrayOneD);
 
 
-        System.out.println();
+        System.out.println(); //пустая строка
 //        convertToTwoDArray();
 //        display();
 
@@ -35,7 +36,7 @@ public class TwoDArray {
 
 
     }
-
+//поиска максимально и минимального в строке
     private void searchRowMax(){
         int max;
         for (int i = 0;i<nRow;i++){
@@ -59,7 +60,7 @@ public class TwoDArray {
             System.out.println(min);
         }
     }
-
+//поиска максимального и минимального в столбце
     private void searchColumnMax(){
         int max;
         for (int i = 0;i<mColumn;i++){
@@ -84,14 +85,15 @@ public class TwoDArray {
         }
     }
 
+    //конструктор
     public TwoDArray(int nRow, int mColumn){
-        this.mColumn=mColumn;
+        this.mColumn=mColumn; //определение полей класса входными параметрами
         this.nRow=nRow;
-        array=new Integer[nRow][mColumn];
-        arrayOneD=new Integer[nRow*mColumn];
+        array=new Integer[nRow][mColumn]; //выделение памяти под массив
+        arrayOneD=new Integer[nRow*mColumn]; //выделение памяти под массив
     }
 
-    private void fillTwoDArray(){
+    private void fillTwoDArray(){ //заполнить массив рандомными числами
         for (int i = 0;i<nRow;i++){
             for(int j=0; j<mColumn;j++){
                 array[i][j]=(int) (Math.random()*100);
@@ -99,7 +101,7 @@ public class TwoDArray {
         }
     }
 
-    public void display(){
+    public void display(){ //вывод двумерного массива
         for (int i = 0;i<nRow;i++){
             for(int j=0; j<mColumn;j++){
                 System.out.print(array[i][j] + " ");
@@ -108,20 +110,20 @@ public class TwoDArray {
         }
     }
 
-    public void displayOneD(){
+    public void displayOneD(){ // не надо
         for (int i = 0;i<nRow*mColumn;i++){
             System.out.print(arrayOneD[i] + " ");
         }
     }
 
-    private  void convertToOneDArray(){
+    private  void convertToOneDArray(){ // конвертировать из двумерного в одномерный
         for (int i = 0;i<nRow;i++){
             for(int j=0; j<mColumn;j++){
                 arrayOneD[i*mColumn+j]=array[i][j];
             }
         }
     }
-    private  void convertToTwoDArray(){
+    private  void convertToTwoDArray(){ // конвертировать из одномерного в двумерный
         for (int i = 0;i<nRow;i++){
             for(int j=0; j<mColumn;j++){
                 array[i][j]=arrayOneD[i*mColumn+j];
