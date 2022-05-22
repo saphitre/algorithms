@@ -1,7 +1,7 @@
 package strustures.doubleLinkList;
 
 public class Link { //элемент списка
-    private int data;//ключевое поле
+    public int data;//ключевое поле
     private String sData; //прочие поля (просто так, не несут функционала)
     public Link next; //ссылка на след элемент
     public Link previous; //ссылка на предыдущий

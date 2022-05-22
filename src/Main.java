@@ -36,6 +36,8 @@ public class Main {
 //        circularLinkList.insert(3,"Bye");
 //        circularLinkList.insert(2,"Good");
 //        System.out.println(circularLinkList.isEmpty());
+//        circularLinkList.sort();
+//        circularLinkList.display();
 //        System.out.println(circularLinkList.findByKey(3));
 //        circularLinkList.delete();
 //        System.out.println(circularLinkList.findByKey(1));
@@ -43,7 +45,10 @@ public class Main {
         //двусвязный список
         DoubleLinkList doubleLinkList = new DoubleLinkList();
         doubleLinkList.insertFirst(1,"Hello");
+        doubleLinkList.insertFirst(3,"Booo");
         doubleLinkList.insertLast(2,"Bye");
+        doubleLinkList.sort();
+        doubleLinkList.display();
         doubleLinkList.deleteLast();
         doubleLinkList.deleteFirst();
         System.out.println(doubleLinkList.isEmpty());

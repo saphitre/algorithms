@@ -58,8 +58,24 @@ public class DoubleLinkList { //двусвязный список
         last=last.previous;
     }
 
+    public void display(){
+        Link current=first;
+        do{
+            current.display();
+            current=current.next;
+        }
+        while (current!=last);
+    }
 
-    public void sort(){ //сортировка
-
+    public void sort() { //сортировка
+        for (Link startNode = first; startNode != last; startNode = startNode.next) {
+            for (Link startNodeL = first; startNodeL != last; startNodeL = startNodeL.next) {
+                if (startNodeL.getData() > startNodeL.next.getData()) {
+                    int tmp = startNodeL.next.data;
+                    startNodeL.next.data = startNodeL.data;
+                    startNodeL.data = tmp;
+                }
+            }
+        }
     }
 }

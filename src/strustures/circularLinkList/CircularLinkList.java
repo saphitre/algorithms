@@ -28,6 +28,7 @@ public class CircularLinkList { //односвязный кольцевой сп
             begin=begin.next;
             end.next=begin;
     }
+
     public void display(){ //вывести список
         Link current = begin;
         do {
@@ -35,6 +36,7 @@ public class CircularLinkList { //односвязный кольцевой сп
             current=current.next;
         }while (current!=begin);
     }
+
     public Link findByKey(int key){ //найти элемент по ключу
          Link current = begin;
         if(current==null) //если список пуст
@@ -48,8 +50,17 @@ public class CircularLinkList { //односвязный кольцевой сп
         return current;
     }
 
-    public void sort(){ //сортировка элементов списка
-
+    public void sort() {
+        for (Link startNode = begin; startNode != end; startNode = startNode.next) {
+            for (Link startNodeL = begin; startNodeL != end; startNodeL = startNodeL.next) {
+                if (startNodeL.getData() > startNodeL.next.getData()) {
+                    Link tmp = startNodeL.next;
+                    startNodeL.next = startNodeL;
+                    startNodeL = tmp;
+                }
+            }
+        }
+        System.out.println("sorted");
     }
 
 //    public Link deleteByKey(int key){
